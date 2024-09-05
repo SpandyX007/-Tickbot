@@ -1,0 +1,244 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f5f2e7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.about-hero {
+    background-image: url('../assets/Interior-National-Gallery-of-Art-Washington-DC.webp'); /* Elegant museum-related background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+
+    z-index: -1;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    z-index: 0;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-family: 'Playfair Display', serif;
+}
+
+.about-hero h1 span {
+    font-weight: bold;
+    color: #FFD700; /* Gold color for museum-like elegance */
+}
+
+.about-hero p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* About & Mission Sections */
+.about-section,
+.mission-vision {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: #fffbe9;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d1b391;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.about-section:hover,
+.mission-vision:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-section h1,
+.mission-vision h1 {
+    font-size: 2.7em;
+    color: #3e4e50;
+    margin-bottom: 25px;
+    font-family: 'Merriweather', serif;
+}
+
+.about-section p,
+.mission-vision p {
+    font-size: 1.3em;
+    color: #5c3d2e;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Accordion */
+.accordion {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.accordion h1 {
+    font-size: 2.5em;
+    color: #3e4e50;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+}
+
+.accordion-item {
+    background-color: #fffbe9;
+    border: 1px solid #d1b391;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.accordion-title {
+    padding: 20px;
+    font-size: 1.6em;
+    color: #5c3d2e;
+    cursor: pointer;
+    background-color: #f0e6d2;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-title:hover {
+    background-color: #d1b391;
+    padding-left: 30px;
+}
+
+.accordion-content {
+    padding: 20px;
+    font-size: 1.1em;
+    color: #7f8c8d;
+    line-height: 1.8;
+    display: none;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+.accordion-item.active .accordion-title {
+    background-color: #8a572a;
+    color: white;
+}
+
+/* Dashboard */
+.dashboard {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.dashboard-title {
+    font-size: 2.7em;
+    text-align: center;
+    color: #3e4e50;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+}
+
+.dashboard-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.dashboard-item {
+    background-color: #fffbe9;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #d1b391;
+}
+
+.dashboard-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-item h2 {
+    font-size: 1.8em;
+    color: #5c3d2e;
+    margin-bottom: 20px;
+}
+
+.dashboard-item p {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    line-height: 1.8;
+}
+
+.dashboard-item:hover h2 {
+    color: #8a572a;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .mission-vision .section-content {
+        flex-direction: column;
+    }
+
+    .dashboard-content {
+        flex-direction: column;
+    }
+
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-hero p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-vision h1,
+    .about-section h1 {
+        font-size: 2rem;
+    }
+
+    .mission-vision p,
+    .about-section p {
+        font-size: 1.1rem;
+    }
+
+    .accordion h1,
+    .dashboard-title {
+        font-size: 2rem;
+    }
+
+    .dashboard-item h2 {
+        font-size: 1.5rem;
+    }
+
+    .dashboard-item p {
+        font-size: 0.9rem;
+    }
+}

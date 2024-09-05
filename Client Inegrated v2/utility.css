@@ -1,0 +1,234 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #8B5E3C;
+    border-bottom: 5px solid #D4AF37;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Make the logo round */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Add shadow to the logo */
+}
+
+.logo-text {
+    font-size: 28px;
+    font-family: 'Garamond', serif;
+    color: #FFF;
+    margin-left: 15px;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li {
+    margin-left: 35px;
+    /* background-color: black; */
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Garamond', serif;
+    color: #FFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    font-size: 24px;
+}
+
+.nav-links ul li a:hover {
+    color: #D4AF37;
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background on hover */
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon-bar {
+    width: 30px;
+    height: 4px;
+    background-color: #FFF;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+}
+
+.languages{
+    font-size: 20px;
+    outline: none;
+}
+
+@media (max-width: 936px) {
+    .nav-links ul {
+        flex-direction: column;
+        background-color: #8B5E3C;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+    }
+
+    .nav-links.active ul {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .nav-links ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .menu-icon-bar:nth-child(1) {
+        transform-origin: top left;
+    }
+
+    .menu-icon-bar:nth-child(3) {
+        transform-origin: bottom left;
+    }
+
+    .menu-icon.active .menu-icon-bar:nth-child(1) {
+        transform: rotate(45deg);
+    }
+
+    .menu-icon.active .menu-icon-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.active .menu-icon-bar:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+}
+
+/* ----------------------------  FOOTER ---------------------------- */
+
+
+
+.footer {
+    background-color: #8B5E3C; /* Heritage brown color */
+    color: #FFF;
+    padding: 20px 0;
+    /* position: fixed; */
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-top: 4px solid #D4AF37; /* Golden accent for heritage look */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 30px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    font-family: 'Garamond', serif;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+    font-family: 'Garamond', serif;
+    margin: 5px 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #FFF;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #D4AF37; /* Golden accent on hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Garamond', serif;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
+}
+
+
+* integration of language feature */
+
+/* Style for the language selector in the navbar */
+.language-select {
+    background-color: #f4f4f4;
+    border: none;
+    color: #333;
+    padding: 5px 10px;
+    margin-left: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.language-select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.nav-links ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.language-box{
+    margin: 0 10px;
+}
+
+.language-box>select{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
